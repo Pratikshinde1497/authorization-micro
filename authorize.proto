@@ -1,0 +1,25 @@
+syntax =  "proto3";
+
+package  authorizePackage;
+
+service Authorize {
+  rpc authorizeUser ( request ) returns ( response );
+}
+
+
+message response {
+  bool allowed = 1;
+}
+
+message user {
+  string email = 1;
+  string name = 2;
+  string role = 3;
+  string createdAt = 4;
+  string updatedAt = 5;
+}
+
+message request {
+  user user = 1;
+  repeated string allowedRoles = 2;
+}
