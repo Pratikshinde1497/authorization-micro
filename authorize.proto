@@ -11,12 +11,15 @@ message response {
   bool allowed = 1;
 }
 
-message user {
-  string email = 1;
-  string name = 2;
-  string role = 3;
-  string createdAt = 4;
-  string updatedAt = 5;
+message user {  string googleId = 1;
+  string displayName = 2;
+  string firstName = 3;
+  string lastName = 4;
+  string image = 5;
+  string provider = 6;
+  string role = 7;
+  string createdAt = 8;
+  string updatedAt = 9;
 }
 
 message request {
